@@ -6,6 +6,8 @@ include_directories(${LIBS_INCLUDE_DIRS})
 add_executable(lcd-test main.c)
 target_link_libraries(lcd-test ${LIBS_LIBRARIES})
 install(TARGETS lcd-test DESTINATION bin)
+install(DIRECTORY images/ DESTINATION share/lcd-test FILES_MATCHING PATTERN "*.png")
+
 
 
 

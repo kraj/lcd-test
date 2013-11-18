@@ -8,6 +8,11 @@ int main (int argc, char** argv) {
   GtkWidget* window;
   GtkWidget* image;
 
+  if (argc < 2) {
+	  printf("Usage: lcd-test <test image>\n");
+	  return -1;
+  }
+
   gtk_init (&argc, &argv);
 
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
