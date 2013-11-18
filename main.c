@@ -1,32 +1,32 @@
 #include <gtk/gtk.h>
 
 void destroy(void) {
-  gtk_main_quit();
+	gtk_main_quit();
 }
 
 int main (int argc, char** argv) {
-  GtkWidget* window;
-  GtkWidget* image;
+	GtkWidget* window;
+	GtkWidget* image;
 
-  if (argc < 2) {
-	  printf("Usage: lcd-test <test image>\n");
-	  return -1;
-  }
+	if (argc < 2) {
+		printf("Usage: lcd-test <test image>\n");
+		return -1;
+	}
 
-  gtk_init (&argc, &argv);
+	gtk_init (&argc, &argv);
 
-  window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-  image  = gtk_image_new_from_file(argv[1]);
+	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+	image  = gtk_image_new_from_file(argv[1]);
 
-  gtk_signal_connect(GTK_OBJECT (window), "destroy",
-    	     GTK_SIGNAL_FUNC (destroy), NULL);
+	gtk_signal_connect(GTK_OBJECT (window), "destroy",
+			GTK_SIGNAL_FUNC (destroy), NULL);
 
-  gtk_container_add(GTK_CONTAINER (window), image);
+	gtk_container_add(GTK_CONTAINER (window), image);
 
-  gtk_widget_show_all(window);
+	gtk_widget_show_all(window);
 
-  gtk_main();
+	gtk_main();
 
-  return 0;
+	return 0;
 }
 
