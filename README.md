@@ -8,23 +8,30 @@ Example
 -------
 
 * cmake ./
-* display-image lcd-test.png
+* ./lcd-test images/lcd-test.png
+
+
+Cross Compiling
+---------------
+
+If you are using OpenEmbedded, use the following recipe:
+
+https://github.com/cbrake/meta-bec/blob/master/recipes/lcd-test/lcd-test\_git.bb
 
 Motivation
 ----------
 
 The project was born out of a need to be able quickly test LCD displays
 in Embedded Linux systems.  It seemed I never had a quick way to display
-a test image on a LCD.  Utilities that (eog) are normally used to do this have
+a test image on a LCD.  Utilities (oeg) that are normally used to do this have
 a ton of dependencies.  The display-image utility only depends on Gtk2 and
 its dependencies, which is typically available for most systems.  
 
 Test Images
 -----------
 
-* lcd-test.png: simply gradients and color tests
-* border.png: single pixel white line around the extents of the image.  This image is useful to verify
-  you have the display alignment correct.  If it is shifted, they you will not see lines on all 4 sides.
+* lcd-test.png: simple gradients and color tests.  Also includes a 1px white line
+  around the border that can be used to check alignment.
 
 Test images are generated using node-canvas.  To re-generate the images:
 
@@ -32,6 +39,7 @@ Test images are generated using node-canvas.  To re-generate the images:
 * edit gen-images.js and enter your LCD size
 * npm install
 * node gen-images.js
+* TODO
 
 
 
