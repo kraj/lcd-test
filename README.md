@@ -16,7 +16,7 @@ Cross Compiling
 
 If you are using OpenEmbedded, use the following recipe:
 
-https://github.com/cbrake/meta-bec/blob/master/recipes/lcd-test/lcd-test\_git.bb
+https://github.com/cbrake/meta-bec/blob/master/recipes/lcd-test/lcd-test_git.bb
 
 Motivation
 ----------
