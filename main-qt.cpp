@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	myImage.load(argv[1]);
 
 	QLabel myLabel;
+	myLabel.setFixedSize(QSize(640, 480));
 	myLabel.setPixmap(QPixmap::fromImage(myImage));
 
 	myLabel.show();
