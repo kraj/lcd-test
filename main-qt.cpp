@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 	QLabel myLabel;
 	myLabel.setFixedSize(QSize(640, 480));
 	myLabel.setPixmap(QPixmap::fromImage(myImage));
+	myLabel.setWindowFlags(Qt::CustomizeWindowHint);
 
 	myLabel.show();
 
